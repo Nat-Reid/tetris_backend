@@ -10,7 +10,6 @@ class Api::V1::ScoresController < ApplicationController
     @user = User.find_or_create_by(initials: score_params[:initials])
     # tiffany.scores.create(score:1200)
     @user.scores.create(score: score_params[:score])
-    byebug
     render json: @score
   end
 
