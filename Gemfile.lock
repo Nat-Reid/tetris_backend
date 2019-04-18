@@ -38,6 +38,11 @@ GEM
       activemodel (= 5.2.3)
       activesupport (= 5.2.3)
       arel (>= 9.0)
+    activerecord-jdbc-adapter (50.0)
+      activerecord (>= 2.2)
+    activerecord-jdbcpostgresql-adapter (50.0)
+      activerecord-jdbc-adapter (~> 50.0)
+      jdbc-postgres (>= 9.4, < 43)
     activestorage (5.2.3)
       actionpack (= 5.2.3)
       activerecord (= 5.2.3)
@@ -63,6 +68,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    jdbc-postgres (42.1.4)
     jsonapi-renderer (0.2.0)
     jwt (2.1.0)
     listen (3.1.5)
@@ -145,6 +151,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.7)
+  activerecord-jdbcpostgresql-adapter
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
